@@ -51,4 +51,6 @@ PLAYLIST_PLATFORM_URL=http://127.0.0.1:8001
 ACCESS_TOKEN_TO_PLAYLIST_PLATFORM=
 ```
 
-12. Run API `{url}/api/v1/user/recommend/playlist/{id}`
+12. Run `php artisan config:cache`
+
+13. Run API `{url}/api/v1/user/recommend/playlist/{id}`
