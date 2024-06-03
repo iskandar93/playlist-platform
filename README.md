@@ -30,7 +30,7 @@ composer migrate-fresh
 
 8. Run `php artisan config:cache`
 
-9. Start a dev server with port 8001
+9. Start a dev server with port `8001`
 ```
 php artisan serve
 ```
@@ -38,10 +38,10 @@ php artisan serve
 10. Run this API `{url}/oauth/token` on Postman to generate client access token
 ```
 x-www-form-urlencoded
-grant_type = client_credentials
-client_id = 
-client_secret = 
-scope =
+grant_type=client_credentials
+client_id= 
+client_secret= 
+scope=
 ```
 
 11. Copy access_token and paste into user_service .env file 
