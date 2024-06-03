@@ -35,4 +35,11 @@ return [
         ],
     ],
 
+    'passport' => [
+        'url' => env('PASSPORT_APP_URL'),
+        'client_id' => env('PASSPORT_CLIENT_ID'),
+        'client_secret' => env('PASSPORT_CLIENT_SECRET'),
+        'scope' => env('PASSPORT_SCOPE', ''),
+    ],
+
 ];
