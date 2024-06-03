@@ -20,17 +20,34 @@ php artisan key:generate
 
 5. Create a database based on `DB_DATABASE` name
 
-5. Run this command
+6. Run this command
 - This command will generate migration file, seeding and install passport client with secret
 ```
 composer migrate-fresh
 ```
 
-6. Copy passport client ID and Secret from `oauth_clients` table into .env file from `ClientCredentials Grant Client`
+7. Copy passport client ID and Secret from `oauth_clients` table into .env file from `ClientCredentials Grant Client`
 
-6. Start a dev server
+8. Run `php artisan config:cache`
+
+9. Start a dev server with port 8001
 ```
 php artisan serve
 ```
 
-7. Login a user from users table using ```api/v1/login``` 
+10. Run this API `{url}/oauth/token` on Postman to generate client access token
+```
+x-www-form-urlencoded
+grant_type = client_credentials
+client_id = 
+client_secret = 
+scope =
+```
+
+11. Copy access_token and paste into user_service .env file 
+```
+PLAYLIST_PLATFORM_URL=http://127.0.0.1:8001
+ACCESS_TOKEN_TO_PLAYLIST_PLATFORM=
+```
+
+12. Login a user from users table using ```api/v1/login``` 
