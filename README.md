@@ -32,10 +32,11 @@ composer migrate-fresh
 
 9. Start a dev server with port `8001`
 ```
-php artisan serve
+php artisan serve --port=8001
 ```
 
 10. Run this API `{url}/oauth/token` on Postman to generate client access token
+- Get this client id and secret from database table oauth_client under `ClientCredentials Grand Client`
 ```
 x-www-form-urlencoded
 grant_type=client_credentials
@@ -50,4 +51,4 @@ PLAYLIST_PLATFORM_URL=http://127.0.0.1:8001
 ACCESS_TOKEN_TO_PLAYLIST_PLATFORM=
 ```
 
-12. Login a user from users table using ```api/v1/login``` 
+12. Run API `{url}/api/v1/user/recommend/playlist/{id}`
